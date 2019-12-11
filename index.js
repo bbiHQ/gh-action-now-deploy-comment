@@ -23,7 +23,7 @@ const zeitAPIClient = axios.create({
 Toolkit.run(async tools => {
   function fetchLastDeployment(params) {
     return zeitAPIClient
-      .get('/v4/now/deployments', { params })
+      .get('/v5/now/deployments', { params })
       .then(({ data }) => data.deployments[0]);
   }
 
